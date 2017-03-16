@@ -2,34 +2,15 @@
 
 */
 
-<<<<<<< HEAD
 /*
 
 */
-=======
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-@font-face {
-    font-family: 'awesome';
-    src: url('awesome.eot');
-    src: url('awesome.eot?#iefix') format('embedded-opentype'), url('awesome.woff') format('woff'), url('awesome.ttf')  format('truetype'), url('awesome.svg#svgFontName') format('svg');
-}
-
-a {
-    text-decoration: none;
-}
->>>>>>> 2d1f29f1803b9ffed060cdc04315932e21b1c9b1
 
 /*
 
 */
 
 #wrapper {
-<<<<<<< HEAD
     position: absolute;
     top: 0;
     bottom: 0;
@@ -55,44 +36,12 @@ a {
 
 #temp {
     display: none;
-=======
-    width: 100%;
-}
-
-#header {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    right: 0;
-    height: 60px;
-    background: #35a;
-}
-
-#meny {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    overflow: scroll;
-    z-index: 1;
-}
-
-#innehall {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
->>>>>>> 2d1f29f1803b9ffed060cdc04315932e21b1c9b1
 }
 
 /*
 
 */
 
-<<<<<<< HEAD
 .image-holder {
     border: 5px solid #ccc;
     border-radius: 50%;
@@ -115,191 +64,4 @@ a {
 #hoger .image-holder img {
     margin-right: -15%;
     float: right;
-=======
-#header img {
-    margin: 5px auto;
-    height: 40px;
-    display: block;
-}
-
-#meny ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-#meny ul li {
-
-}
-
-#meny ul li a {
-    display: block;
-    height: 60px;
-    width: 60px;
-    background: #ccc;
-    line-height: 60px;
-    text-align: center;
-    font-family: "awesome";
-    color: #fff;
-    font-size: 25px;
-}
-
-#meny ul li.arm a {
-    background: #35a;
-    border-top: none;
-}
-
-#meny ul li.arm a:before {
-    content: "\f1d8";
-}
-
-#meny ul li.photo a {
-    background: #5a3;
-}
-
-#meny ul li.photo a:before {
-    content: "\f030";
-}
-
-#meny ul li.video a {
-    background: #5a3;
-}
-
-#meny ul li.video a:before {
-    content: "\f03d";
-}
-
-#meny ul li.home a {
-    background: #a35;
-}
-
-#meny ul li.home a:before {
-    content: "\f015";
-}
-
-#meny ul li.slowmotion a {
-    background: #5a3;
-}
-
-#meny ul li.slowmotion a:before {
-    content: "\f017";
-}
-
-#meny ul li.library a {
-    background: #5a3;
-}
-
-#meny ul li.library a:before {
-    content: "\f03e";
-}
-
-#meny ul li.emergency a {
-    background: #a35;
-}
-
-#meny ul li.emergency a:before {
-    content: "\f071";
-}
-
-#meny ul li.wifi a {
-    background: #999;
-}
-
-#meny ul li.wifi a:before {
-    content: "\f1eb";
-}
-
-#meny ul li.sensor a {
-    background: #999;
-    border-bottom: none;
-}
-
-#meny ul li.sensor a:before {
-    content: "\f085";
-}
-
-#meny ul li a:hover {
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
-}
-
-#meny ul li a:active {
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .6);
-}
-
-#meny ul li a.active {
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 1);
-}
-
-#innehall img.background {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-}
-
-#innehall img.background.active {
-    z-index: -1;
-}
-
-#innehall .left, #innehall .right {
-    width: 50%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-}
-
-#innehall .right {
-    left: 50%;
-}
-
-#innehall #pilot .knob {
-    width: 98px;
-    height: 98px;
-    display: block;
-    position: absolute;
-    margin-bottom: -50px;
-    margin-left: -50px;
-    bottom: 0;
-    left: 50%;
-    background: url(throttle-jaw.png);
-    border-radius: 50px;
-    border: 1px solid #000;
-    box-shadow: inset 0 0 50px #000, 0 0 5px #fff;
-}
-
-#innehall #pilot .right .knob {
-    background: url(pitch-roll.png);
-    bottom: 50%;
-}
-
-#innehall .stl {
-    left: 50%;
-    top: 50%;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    pointer-events: none;
-}
-
-/*
-
-*/
-
-body.ipho:after {
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    background-image: url(rotate.gif);
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 2;
->>>>>>> 2d1f29f1803b9ffed060cdc04315932e21b1c9b1
 }
