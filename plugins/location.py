@@ -2,10 +2,10 @@ class location:
     def __init__(self):
         ""
 
-    def touch(self, log, sensors):
+    def touch(self, interface, log, sensors, plugin):
         ""
 
-    def run(self, command, log, sensors):
+    def run(self, interface, log, sensors, plugin):
         ""
 
     def emergency(self, log, sensors):

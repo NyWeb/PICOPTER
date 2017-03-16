@@ -24,13 +24,13 @@ class camera(threading.Thread):
             "fps": 1
         },
         "": {
-            "w": 800,
-            "h": 600,
-            "fps": 10
+            "w": 200,
+            "h": 120,
+            "fps": 30
         }
     }
 
-    path = "/var/www/html/images/"
+    path = "/var/www/html/photos/"
 
     error = False
 
@@ -40,14 +40,16 @@ class camera(threading.Thread):
 
         try:
             self.camera = picamera.PiCamera()
+            self.camera.vflip = True;
 
-        except IOError:
+        except picamera.exc.PiCameraError:
             self.error = "ioerror initialize"
             return
 
     def run(self):
-        self.camera.start_preview()
-        while True:
+        if(self.camera):
+            self.camera.start_preview()
+        while self.camera:
             try:
                 if(self.busy):
                     if(self.action==""):
@@ -71,13 +73,24 @@ class camera(threading.Thread):
 
                     else:
                         i = 0
-                        for key in self.camera.capture_continuous("/tmp/image.jpg", format='jpeg', use_video_port=True):
-                            os.rename(key, self.path+"image.jpg")
+                        timer = 0
+                        for key in self.camera.capture_continuous("/var/www/html/tmp/loading.jpg", format='jpeg', use_video_port=True):
+                            image = "/var/www/html/tmp/image"+str(i)+".jpg"
+                            os.rename(key, image)
+                            i += 1
+
+                            if(i==2):
+                                i = 0
+
                             if(self.action):
                                 break
 
             except IOError:
                 self.error = "ioerror"
+                print "no-camera"
 
     def read(self):
+        return False
+
+    def cancel(self, motors):
         return False

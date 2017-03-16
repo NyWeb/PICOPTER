@@ -69,7 +69,7 @@ class location(threading.Thread):
             except IOError:
                 self.error = "ioerror"
 
-            time.sleep(.5)
+            time.sleep(1)
 
     def read(self):
         return self.value
@@ -79,3 +79,6 @@ class location(threading.Thread):
         y = self.latitude-latitude
         distance2d = self.radius*sqrt(x*x+y*y)
         return sqrt(distance2d*distance2d+((self.altitidue-altitude)*(self.altitidue-altitude)))
+
+    def cancel(self, motors):
+        return False

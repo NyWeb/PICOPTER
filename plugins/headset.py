@@ -1,4 +1,4 @@
-class path:
+class headset:
     def __init__(self):
         ""
 
@@ -6,7 +6,7 @@ class path:
         ""
 
     def run(self, interface, log, sensors, plugin):
-        ""
+        return {"headset": int(interface)*50}
 
     def emergency(self, log, sensors):
         ""

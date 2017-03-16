@@ -84,3 +84,6 @@ class gyroscope(threading.Thread):
             return twos_comp - 65536
         else:
             return twos_comp
+
+    def cancel(self, motors):
+        return False

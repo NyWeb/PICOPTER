@@ -1,5 +1,7 @@
 import threading
 import smbus
+import random
+import time
 
 class pwm(threading.Thread):
     bus = False
@@ -29,6 +31,13 @@ class pwm(threading.Thread):
             self.bus.write_byte_data(self.address, 0x00, oldmode)
             self.bus.write_byte_data(self.address, 0x00, oldmode | 0x80)
 
+            #Reset motors
+            self.set(0, 0)
+            self.set(1, 0)
+            self.set(2, 0)
+            self.set(3, 0)
+            self.set(4, 0)
+
         except IOError:
             self.error = "ioerror initialize"
             return
@@ -39,8 +48,9 @@ class pwm(threading.Thread):
     def read(self):
         return False
 
-    def set(self, motor, torque):
-        input = int(((torque)*self.k)+self.m)
+    def set(self, motor, input, calculate = True):
+        if calculate:
+            input = int(((input)*self.k)+self.m)
 
         try:
             self.bus.write_byte_data(self.address, 0x06+4*motor, 0 & 0xFF)
@@ -50,3 +60,7 @@ class pwm(threading.Thread):
 
         except IOError:
             self.error = "ioerror"
+
+    def cancel(self, motors):
+        for motor in motors:
+            self.set(motors[motor], 0, False)

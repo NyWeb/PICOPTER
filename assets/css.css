@@ -1,0 +1,67 @@
+/*
+
+*/
+
+/*
+
+*/
+
+/*
+
+*/
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#vanster {
+    position: absolute;
+    left: 0;
+    width: 40%;
+    top: 20%;
+    bottom: 10%;
+}
+
+#hoger {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    top: 20%;
+    bottom: 10%;
+}
+
+#temp {
+    display: none;
+}
+
+/*
+
+*/
+
+.image-holder {
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    width: 100%;
+    height:  100%;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-holder img {
+    height:  100%;
+}
+
+#vanster .image-holder img {
+    margin-left: -15%;
+    float: left;
+}
+
+#hoger .image-holder img {
+    margin-right: -15%;
+    float: right;
+}

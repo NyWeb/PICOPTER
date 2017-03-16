@@ -95,3 +95,6 @@ class accelerometer(threading.Thread):
 
     def read(self):
         return self.value
+
+    def cancel(self, motors):
+        return False
